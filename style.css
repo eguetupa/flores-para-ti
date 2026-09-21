@@ -1,0 +1,238 @@
+/* ==============================================================================
+   ESTILOS PERSONALIZADOS — FLORES AMARILLAS & SKZ (BANG CHAN & WOLF CHAN)
+   Estética: Coquette / K-Pop Dreamy Glassmorphism / Yellow Flowers Theme
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --flower-yellow: #facc15;
+  --flower-gold: #eab308;
+  --pastel-pink: #fce7f3;
+  --blush-pink: #fbcfe8;
+  --soft-cream: #fffdfa;
+  --glass-border: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.78);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #fff9f0;
+  overflow-x: hidden;
+  color: #374151;
+}
+
+.font-handwriting {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-letter {
+  font-family: 'Caveat', cursive;
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(253, 224, 71, 0.6);
+}
+
+/* Floating & Ambient Animations */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 25px rgba(250, 204, 21, 0.25);
+  }
+  50% {
+    transform: scale(1.015);
+    box-shadow: 0 0 45px rgba(250, 204, 21, 0.5);
+  }
+}
+
+.animate-float-gentle {
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: gentlePulse 3.5s ease-in-out infinite;
+}
+
+/* 3D Photocard Styling & Holographic Sheen */
+.photocard-container {
+  perspective: 1200px;
+}
+
+.photocard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-style: preserve-3d;
+}
+
+.photocard-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.photocard-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.photocard-back {
+  transform: rotateY(180deg);
+}
+
+/* Holographic Rainbow Sheen */
+.holo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 215, 0, 0.3) 25%,
+    rgba(255, 105, 180, 0.25) 45%,
+    rgba(56, 189, 248, 0.25) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mix-blend-mode: color-dodge;
+  opacity: 0.65;
+  pointer-events: none;
+  background-size: 250% 250%;
+  transition: opacity 0.3s ease;
+}
+
+/* Sobre Interactivo (Secret Envelope) */
+.envelope-wrapper {
+  position: relative;
+  min-height: 340px;
+  perspective: 1200px;
+  transition: min-height 0.6s ease;
+}
+
+.envelope-wrapper.open {
+  min-height: 520px;
+}
+
+.envelope-flap {
+  transform-origin: top center;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 25;
+}
+
+.envelope-wrapper.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 5;
+}
+
+.letter-paper {
+  position: absolute;
+  top: 40px;
+  transition: transform 0.8s cubic-bezier(0.34, 1.25, 0.64, 1), opacity 0.4s ease;
+  transform: translateY(0);
+  opacity: 0.85;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.envelope-wrapper.open .letter-paper {
+  transform: translateY(-60px);
+  opacity: 1;
+  z-index: 30;
+  pointer-events: auto;
+}
+
+@media (min-width: 640px) {
+  .envelope-wrapper.open .letter-paper {
+    transform: translateY(-90px);
+  }
+}
+
+/* Flores en el Jardín: Pop & Bloom */
+@keyframes flowerPop {
+  0% {
+    transform: scale(0) rotate(-15deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.18) rotate(6deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.flower-bloom {
+  animation: flowerPop 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdf6ec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fde047;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #eab308;
+}
+
+/* Equalizer Bars Animation */
+@keyframes bounceBar {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 22px;
+  }
+}
+
+.equalizer-bar {
+  animation: bounceBar 1.2s ease-in-out infinite alternate;
+}
+
+.equalizer-bar:nth-child(1) { animation-delay: 0.1s; }
+.equalizer-bar:nth-child(2) { animation-delay: 0.4s; }
+.equalizer-bar:nth-child(3) { animation-delay: 0.2s; }
+.equalizer-bar:nth-child(4) { animation-delay: 0.5s; }
+.equalizer-bar:nth-child(5) { animation-delay: 0.3s; }
+
+.paused .equalizer-bar {
+  animation-play-state: paused;
+  height: 4px !important;
+}
