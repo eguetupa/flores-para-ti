@@ -7,12 +7,12 @@
   <title>Tus Flores Amarillas 🌼 | Stray Kids & Bang Chan Edition</title>
 
   <!-- Meta Tags para Previsualización (WhatsApp, Instagram, etc.) -->
-  <meta name="title" content="Tus Flores Amarillas 🌼 | Para Alguien Muy Especial">
+  <meta name="title" content="Tus Flores Amarillas 🌼 | Para Gabriela (Bombón)">
   <meta name="description"
-    content="Un detalle interactivo de primavera con flores amarillas, Wolf Chan y Bang Chan de Stray Kids.">
-  <meta property="og:title" content="Tus Flores Amarillas 🌼 | Un Detalle Especial">
+    content="Un detalle interactivo de flores amarillas con Wolf Chan y Bang Chan de Stray Kids. Jardín interactivo, photocard 3D holográfica, Chan's Room y carta secreta.">
+  <meta property="og:title" content="Tus Flores Amarillas 🌼 | Un Detalle Especial para Gabriela">
   <meta property="og:description"
-    content="Abre este regalo para descubrir tu jardín interactivo, tu photocard 3D y tu carta secreta.">
+    content="Descubre tu jardín de flores eternas, tu photocard 3D de Bang Chan, música reconfortante y tu carta secreta.">
   <meta property="og:image" content="assets/bangchan.jpg">
   <meta property="og:type" content="website">
 
@@ -70,11 +70,18 @@
   <!-- Canvas de fondo para partículas y pétalos flotantes -->
   <canvas id="petalsCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
-  <!-- Botones Flotantes de Control (Sonido & Compartir) -->
+  <!-- Botones Flotantes de Control Superior -->
   <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+    <!-- Botón Rápido: Abrazo de Bang Chan -->
+    <button id="quickHugBtn" title="Pedir un Abrazo a Bang Chan"
+      class="glass-pill px-3.5 py-2 rounded-full text-xs font-bold text-amber-900 shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1.5 transform hover:scale-105 active:scale-95 border border-yellow-300">
+      <span class="text-base">🤗</span>
+      <span class="hidden sm:inline">Abrazo de Chan</span>
+    </button>
+
     <!-- Alternar Sonido -->
     <button id="soundToggleBtn" title="Activar/Silenciar Efectos de Sonido"
-      class="glass-pill p-3 rounded-full text-yellow-800 hover:text-yellow-900 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95">
+      class="glass-pill p-2.5 rounded-full text-yellow-800 hover:text-yellow-900 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 border border-yellow-300">
       <svg id="soundIconOn" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
@@ -87,14 +94,14 @@
       </svg>
     </button>
 
-    <!-- Copiar Enlace -->
+    <!-- Compartir / Copiar Enlace -->
     <button id="shareAppBtn" title="Compartir este Detalle"
-      class="glass-pill px-4 py-2.5 rounded-full text-xs font-semibold text-amber-900 shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1.5 transform hover:scale-105 active:scale-95">
+      class="glass-pill px-3.5 py-2 rounded-full text-xs font-semibold text-amber-900 shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1.5 transform hover:scale-105 active:scale-95 border border-yellow-300">
       <svg class="w-4 h-4 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
       </svg>
-      <span>Compartir</span>
+      <span class="hidden sm:inline">Compartir</span>
     </button>
   </div>
 
@@ -104,13 +111,13 @@
     <!-- =========================================================================
          1. HERO SECTION (BIENVENIDA & WOLF CHAN)
          ========================================================================= -->
-    <section class="text-center space-y-6 pt-4 sm:pt-8">
+    <section class="text-center space-y-6 pt-4 sm:pt-6">
 
       <!-- Badge de Fecha Especial -->
       <div
-        class="inline-flex items-center gap-2 px-5 py-2 rounded-full glass-pill text-xs sm:text-sm font-medium text-amber-900 shadow-sm border border-yellow-300/60 animate-bounce">
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full glass-pill text-xs sm:text-sm font-medium text-amber-900 shadow-sm border border-yellow-300/80 animate-bounce">
         <span class="text-base">🌼</span>
-        <span>21 de Septiembre • Flores Amarillas para mi Gabriela </span>
+        <span>21 de Septiembre • Flores Amarillas para mi Gabriela</span>
         <span class="text-base">✨</span>
       </div>
 
@@ -126,45 +133,58 @@
         </h1>
         <p class="font-body text-sm sm:text-base text-gray-600 max-w-xl mx-auto leading-relaxed pt-2">
           Para mi <strong class="text-amber-700 font-semibold">bombón</strong> favorita: porque mereces flores eternas
-          que acompañen tu estilo impecable, tu vibra relajante en tonos encantadores y esa ternura tan hermosa que
-          tienes 🐺💛
+          que acompañen tu talento increíble, tus outfits relajantes en tonos neutros y esa ternura tan hermosa que
+          me derrite el corazón 🐺💛
         </p>
       </div>
 
-      <!-- Tarjeta Mascota: Wolf Chan con Ramo de Flores Amarillas -->
+      <!-- Tarjeta Mascota: Wolf Chan Interactivo -->
       <div class="max-w-md mx-auto pt-2">
         <div
-          class="glass-card rounded-4xl p-6 sm:p-7 shadow-2xl relative overflow-hidden border border-white/80 animate-pulse-glow">
+          class="glass-card rounded-4xl p-6 sm:p-7 shadow-2xl relative overflow-hidden border border-white/90 animate-pulse-glow">
 
-          <!-- Destello de fondo -->
+          <!-- Destellos de fondo -->
           <div class="absolute -top-10 -right-10 w-36 h-36 bg-yellow-300/30 rounded-full blur-2xl pointer-events-none">
           </div>
           <div class="absolute -bottom-10 -left-10 w-36 h-36 bg-pink-200/40 rounded-full blur-2xl pointer-events-none">
           </div>
 
-          <!-- Imagen de Wolf Chan con Flores Amarillas -->
-          <div
-            class="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-3xl overflow-hidden shadow-xl border-4 border-white/90 group">
-            <img src="assets/wolfchan.jpg" alt="Wolf Chan con Flores Amarillas"
+          <!-- Imagen de Wolf Chan con Caricias Interactivas (Encuadre enfocado en Wolf Chan y Flores) -->
+          <div id="wolfChanAvatar"
+            class="wolfchan-avatar-container relative w-56 h-64 sm:w-64 sm:h-72 mx-auto rounded-3xl overflow-hidden shadow-xl border-4 border-white/90 cursor-pointer group select-none">
+            <img src="assets/wolfchan.jpg" alt="Wolf Chan con Flores Amarillas" style="object-position: 68% 95%;"
               class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             <div
-              class="absolute bottom-2 left-2 right-2 bg-white/85 backdrop-blur-md rounded-xl py-1 px-2.5 text-center text-[11px] font-bold tracking-wider text-amber-900 border border-yellow-200 shadow-sm">
-              🐾 WOLF CHAN OFFICIAL • SKZOO
+              class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none">
             </div>
+
+            <!-- Etiqueta SKZOO en la parte superior para dejar visible a Wolf Chan -->
+            <div
+              class="absolute top-2.5 inset-x-2.5 bg-white/90 backdrop-blur-md rounded-xl py-1 px-2.5 text-center text-[11px] font-bold tracking-wider text-amber-900 border border-yellow-200 shadow-sm pointer-events-none">
+              🐾 TOCA A WOLF CHAN • ACARÍCIALO
+            </div>
+
+            <!-- Contenedor para corazones flotantes de caricias -->
+            <div id="wolfChanHeartsContainer" class="absolute inset-0 pointer-events-none"></div>
           </div>
 
           <!-- Globo de diálogo tierno de Wolf Chan -->
           <div
-            class="mt-5 relative bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-yellow-100 text-left">
+            class="mt-5 relative bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-yellow-100 text-left transition-all duration-300">
             <div class="flex items-start gap-3">
-              <span class="text-2xl select-none">🐺</span>
+              <span id="wolfChanMoodIcon" class="text-2xl select-none animate-bounce">🐺</span>
               <div class="space-y-1">
-                <p class="text-xs font-bold text-amber-800 tracking-wide">MENSAJE DE WOLF CHAN:</p>
-                <p class="text-xs sm:text-sm text-gray-700 leading-snug">
-                  "¡Hola, bombón! Sé cuánto amas hacer arte en las uñas y armar outfits relajantes y hermosos con tus
-                  colores neutros. Bang Chan y yo sabemos que aunque seas la mayor, te pones chiquita y súper tierna
-                  cuando te tratan bonito... ¡así que hoy te llenamos de flores amarillas y mimos! 🐾✨🌻"
+                <div class="flex items-center justify-between">
+                  <p class="text-xs font-bold text-amber-800 tracking-wide">MENSAJE DE WOLF CHAN:</p>
+                  <span id="wolfChanPetCounter"
+                    class="text-[10px] font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">
+                    🐾 0 mimos
+                  </span>
+                </div>
+                <p id="wolfChanDialogue" class="text-xs sm:text-sm text-gray-700 leading-snug">
+                  "¡Hola, bombón! Sé cuánto amas hacer arte en las uñas y armar outfits relajantes con tus
+                  colores. Bang Chan y yo sabemos que aunque seas la mayor, te pones chiquita y súper tierna
+                  cuando te trato bonito... ¡así que hoy te llenamos de flores amarillas y mimos! 🐾✨🌻"
                 </p>
               </div>
             </div>
@@ -172,15 +192,17 @@
 
           <!-- Botones de Acción Rápida -->
           <div class="flex flex-wrap items-center justify-center gap-3 pt-5">
+            <button id="heroHugBtn"
+              class="px-5 py-2.5 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-amber-400 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-pink-300/50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2">
+              <span class="text-base">🤗</span>
+              <span>Pedir Abrazo a Bang Chan</span>
+            </button>
             <a href="#jardin"
               class="px-5 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-yellow-950 font-bold text-xs sm:text-sm shadow-md hover:shadow-yellow-300/50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2">
               <span>💧 Regar tu Jardín</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
             </a>
             <a href="#photocard"
-              class="px-5 py-2.5 rounded-full glass-pill text-gray-700 font-semibold text-xs sm:text-sm shadow-sm hover:shadow-md transition-all duration-300 hover:text-amber-900 flex items-center gap-1.5">
+              class="px-4 py-2.5 rounded-full glass-pill text-gray-700 font-semibold text-xs sm:text-sm shadow-sm hover:shadow-md transition-all duration-300 hover:text-amber-900 flex items-center gap-1.5">
               <span>🐺 Photocard Bang Chan</span>
             </a>
           </div>
@@ -205,24 +227,24 @@
           Tu Jardín Eterno de Primavera 🌻
         </h2>
         <p class="text-xs sm:text-sm text-gray-600 max-w-lg mx-auto">
-          Toca o haz clic en cualquier rincón del jardín para hacer florecer una nueva flor amarilla. ¡Descubre los
-          mensajes ocultos al sumar flores!
+          Haz clic o toca en cualquier parte del jardín para florecer una nueva flor amarilla. ¡Cada flor guarda un
+          cumplido sincero y especial para ti!
         </p>
       </div>
 
       <!-- Tarjeta del Jardín -->
-      <div class="glass-card rounded-4xl p-5 sm:p-8 shadow-2xl border border-white/80 space-y-5">
+      <div class="glass-card rounded-4xl p-5 sm:p-8 shadow-2xl border border-white/90 space-y-5">
 
         <!-- Marcador y Barra de Progreso hacia las 21 Flores -->
         <div
-          class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-yellow-200/70 shadow-sm">
+          class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/85 backdrop-blur-md rounded-2xl p-4 border border-yellow-200/80 shadow-sm">
           <div class="flex items-center gap-3">
             <div
               class="w-12 h-12 rounded-2xl bg-yellow-100 flex items-center justify-center text-2xl shadow-inner border border-yellow-300">
               🌼
             </div>
             <div>
-              <div class="text-xs text-gray-500 font-medium">Flores regaladas para ti:</div>
+              <div class="text-xs text-gray-500 font-medium">Flores amarillas para ti:</div>
               <div class="text-xl sm:text-2xl font-black text-gray-800 flex items-center gap-1">
                 <span id="flowerCounter" class="text-amber-600">0</span>
                 <span class="text-sm font-semibold text-gray-400">/ 21 flores de septiembre</span>
@@ -230,16 +252,23 @@
             </div>
           </div>
 
-          <!-- Botón de Regar con Sonido -->
-          <button id="waterGardenBtn"
-            class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-yellow-400 to-amber-500 text-yellow-950 font-bold text-sm shadow-md hover:shadow-yellow-400/40 hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
-            <span class="text-lg">💧</span>
-            <span>Regar Jardín (+1 Flor)</span>
-          </button>
+          <!-- Acciones del Jardín -->
+          <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+            <button id="waterGardenBtn"
+              class="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-gradient-to-r from-yellow-400 to-amber-500 text-yellow-950 font-bold text-xs sm:text-sm shadow-md hover:shadow-yellow-400/40 hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5">
+              <span>💧</span>
+              <span>Regar (+1 Flor)</span>
+            </button>
+            <button id="bloomAllBtn" title="Completar las 21 flores de una vez"
+              class="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-yellow-100 text-amber-900 hover:bg-yellow-200 font-bold text-xs sm:text-sm shadow-sm transition-all duration-300 flex items-center justify-center gap-1.5 border border-yellow-300">
+              <span>💐</span>
+              <span>Ramo Completo</span>
+            </button>
+          </div>
         </div>
 
         <!-- Barra de Progreso Gráfica -->
-        <div class="w-full bg-yellow-100/80 rounded-full h-3 overflow-hidden p-0.5 border border-yellow-200">
+        <div class="w-full bg-yellow-100/80 rounded-full h-3.5 overflow-hidden p-0.5 border border-yellow-200">
           <div id="gardenProgressBar"
             class="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 h-full rounded-full transition-all duration-500 ease-out"
             style="width: 14%;"></div>
@@ -247,23 +276,24 @@
 
         <!-- Superficie Interactiva del Jardín (Garden Bed) -->
         <div id="gardenArea"
-          class="relative w-full h-80 sm:h-96 rounded-3xl bg-gradient-to-b from-[#fefce8] via-[#fef9c3] to-[#fef08a]/60 border-2 border-dashed border-yellow-300/80 overflow-hidden cursor-crosshair shadow-inner select-none transition-colors hover:border-yellow-400">
+          class="relative w-full h-80 sm:h-96 rounded-3xl bg-gradient-to-b from-[#fefce8] via-[#fef9c3] to-[#fef08a]/60 border-2 border-dashed border-yellow-300/90 overflow-hidden cursor-crosshair shadow-inner select-none transition-colors hover:border-yellow-400">
 
           <!-- Indicador flotante en el centro si está vacío -->
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-4 opacity-50">
+          <div id="gardenEmptyHint"
+            class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-4 opacity-60">
             <span class="text-4xl animate-bounce">🌱</span>
-            <p class="text-xs sm:text-sm font-semibold text-yellow-900 mt-2">Haz clic aquí en cualquier parte para
-              sembrar flores amarillas</p>
+            <p class="text-xs sm:text-sm font-bold text-yellow-900 mt-2">
+              Haz clic o toca en cualquier rincón para hacer florecer girasoles, margaritas y tulipanes
+            </p>
           </div>
 
           <!-- Capa inferior de césped/brote decorativo -->
           <div
-            class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-emerald-100/40 to-transparent pointer-events-none">
+            class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-emerald-200/40 to-transparent pointer-events-none">
           </div>
         </div>
 
-        <!-- Mensaje Toast de Hito Desbloqueado (Oculto por defecto) -->
+        <!-- Mensaje Toast de Hito Desbloqueado -->
         <div id="milestoneToast"
           class="hidden transform transition-all duration-500 bg-gradient-to-r from-amber-500 to-yellow-500 text-white rounded-2xl p-4 shadow-xl flex items-center justify-between gap-4">
           <div class="flex items-center gap-3">
@@ -283,7 +313,7 @@
 
     <!-- =========================================================================
          3. ZONA STRAY KIDS: BANG CHAN & WOLF CHAN
-         Photocard 3D Holográfica + Reproductor Retro/Spotify
+         Photocard 3D Holográfica + Reproductor Chan's Room
          ========================================================================= -->
     <section id="photocard" class="space-y-6 scroll-mt-20">
 
@@ -298,8 +328,8 @@
           Photocard 3D & Chan's Room 🎵
         </h2>
         <p class="text-xs sm:text-sm text-gray-600 max-w-lg mx-auto">
-          Una tarjeta coleccionable virtual con acabado tornasolado y un reproductor con melodía reconfortante para
-          acompañar tu día.
+          Tarjeta coleccionable virtual con acabado holográfico tornasolado y un reproductor de música con melodías
+          reconfortantes para acompañar tu día.
         </p>
       </div>
 
@@ -308,113 +338,120 @@
         <!-- Columna 1: Photocard 3D Coleccionable -->
         <div class="flex flex-col items-center">
 
-          <div id="photocardContainer" class="photocard-container w-72 h-[410px] sm:w-80 sm:h-[450px] cursor-pointer">
-            <div id="photocardInner" class="photocard-inner shadow-2xl rounded-3xl">
+          <!-- Contenedor con Perspectiva 3D -->
+          <div id="photocardContainer"
+            class="photocard-perspective-container w-72 h-[420px] sm:w-80 sm:h-[460px] cursor-pointer">
+            <!-- Envoltorio de Inclinación Parallax -->
+            <div id="photocardTiltWrapper" class="photocard-tilt-wrapper w-full h-full">
+              <!-- Envoltorio de Volteo 180° -->
+              <div id="photocardInner" class="photocard-inner shadow-2xl rounded-3xl">
 
-              <!-- Frente de la Photocard: Bang Chan con Ramo de Flores Amarillas -->
-              <div
-                class="photocard-face bg-white p-3 border-4 border-yellow-200/90 shadow-2xl flex flex-col justify-between">
-
-                <!-- Encabezado de la Photocard -->
-                <div class="flex items-center justify-between px-2 pt-1 pb-2">
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-sm font-black tracking-widest text-amber-950">STRAY KIDS</span>
-                    <span
-                      class="text-[10px] px-1.5 py-0.5 rounded bg-yellow-400 text-yellow-950 font-bold">LIMITED</span>
-                  </div>
-                  <span class="text-xs text-amber-800 font-bold">🐺 21/09</span>
-                </div>
-
-                <!-- Foto de Bang Chan con Flores Amarillas -->
-                <div class="relative w-full h-[320px] sm:h-[350px] rounded-2xl overflow-hidden shadow-inner">
-                  <img src="assets/bangchan.jpg" alt="Bang Chan Flores Amarillas" class="w-full h-full object-cover">
-
-                  <!-- Capa de brillo holográfico tornasolado -->
-                  <div id="holoOverlay" class="holo-overlay"></div>
-
-                  <!-- Badge inferior de la foto -->
-                  <div
-                    class="absolute bottom-3 inset-x-3 bg-black/40 backdrop-blur-md rounded-xl py-1.5 px-3 text-white flex items-center justify-between">
-                    <div>
-                      <div class="text-[10px] uppercase font-bold text-yellow-300">Best Leader</div>
-                      <div class="text-xs font-extrabold tracking-wide">BANG CHAN (방찬)</div>
-                    </div>
-                    <span class="text-lg">🌻</span>
-                  </div>
-                </div>
-
-                <!-- Pie de la Photocard -->
-                <div class="text-center pt-1.5">
-                  <span class="text-[10px] tracking-wider text-gray-400 font-semibold uppercase">Toca para voltear y
-                    leer a Chan ↻</span>
-                </div>
-
-              </div>
-
-              <!-- Reverso de la Photocard: Mensaje Caligráfico de Chan's Room -->
-              <div
-                class="photocard-face photocard-back bg-gradient-to-br from-[#fff7ed] via-[#fff1f2] to-[#fefce8] p-6 border-4 border-pink-200 shadow-2xl flex flex-col justify-between text-left">
-
-                <!-- Sello y Logo SKZ -->
-                <div class="flex items-center justify-between border-b border-pink-200/60 pb-3">
-                  <div class="flex items-center gap-2">
-                    <span class="text-xl">🐺</span>
-                    <div>
-                      <div class="text-xs font-black tracking-wider text-gray-800">CHAN'S ROOM</div>
-                      <div class="text-[10px] text-pink-700 font-semibold">SAFE PLACE FOR STAY</div>
-                    </div>
-                  </div>
-                  <span class="text-xs font-bold text-amber-600">STAY 💛</span>
-                </div>
-
-                <!-- Mensaje de Chan -->
-                <div class="space-y-3 py-2">
-                  <p class="font-letter text-lg sm:text-xl text-gray-800 leading-snug">
-                    "Hey Gabriela (Bombón)! Bang Chan here 🐺💛
-                    <br><br>
-                    Just wanted to remind you how special, talented and amazing you are. Keep creating magic with your
-                    nail art, rocking those peaceful aesthetic outfits, and smiling bright.
-                    <br><br>
-                    Whenever you need comfort or a little safe space, Chan's room is always open for you. Hugs from
-                    afar, Stay!"
-                  </p>
-                  <div class="text-right">
-                    <span class="font-handwriting text-xl text-amber-700 font-bold">— Christopher Bang 🐾</span>
-                  </div>
-                </div>
-
-                <!-- Detalles de fondo del reverso -->
+                <!-- Frente de la Photocard: Bang Chan con Ramo de Flores Amarillas -->
                 <div
-                  class="border-t border-pink-200/60 pt-2 flex items-center justify-between text-[10px] text-gray-400 font-medium">
-                  <span>SPECIAL GIFT EDITION</span>
-                  <span>YOU MAKE STRAY KIDS STAY</span>
+                  class="photocard-face bg-white p-3 border-4 border-yellow-200/90 shadow-2xl flex flex-col justify-between select-none">
+
+                  <!-- Encabezado de la Photocard -->
+                  <div class="flex items-center justify-between px-2 pt-1 pb-2">
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-sm font-black tracking-widest text-amber-950">STRAY KIDS</span>
+                      <span
+                        class="text-[10px] px-1.5 py-0.5 rounded bg-yellow-400 text-yellow-950 font-bold">LIMITED</span>
+                    </div>
+                    <span class="text-xs text-amber-800 font-bold">🐺 21/09</span>
+                  </div>
+
+                  <!-- Foto de Bang Chan con Flores Amarillas -->
+                  <div class="relative w-full h-[320px] sm:h-[355px] rounded-2xl overflow-hidden shadow-inner">
+                    <img src="assets/bangchan.jpg" alt="Bang Chan Flores Amarillas" class="w-full h-full object-cover">
+
+                    <!-- Capa de brillo holográfico tornasolado -->
+                    <div id="holoOverlay" class="holo-overlay"></div>
+
+                    <!-- Badge inferior de la foto -->
+                    <div
+                      class="absolute bottom-3 inset-x-3 bg-black/40 backdrop-blur-md rounded-xl py-1.5 px-3 text-white flex items-center justify-between">
+                      <div>
+                        <div class="text-[10px] uppercase font-bold text-yellow-300">Best Leader</div>
+                        <div class="text-xs font-extrabold tracking-wide">BANG CHAN (방찬)</div>
+                      </div>
+                      <span class="text-lg">🌻</span>
+                    </div>
+                  </div>
+
+                  <!-- Pie de la Photocard Frente -->
+                  <div class="text-center pt-1.5">
+                    <span class="text-[10px] tracking-wider text-gray-400 font-semibold uppercase">Toca para voltear y
+                      leer a Chan ↻</span>
+                  </div>
+
+                </div>
+
+                <!-- Reverso de la Photocard: Mensaje Caligráfico de Chan's Room -->
+                <div
+                  class="photocard-face photocard-back bg-gradient-to-br from-[#fff7ed] via-[#fff1f2] to-[#fefce8] p-6 border-4 border-pink-200 shadow-2xl flex flex-col justify-between text-left select-none">
+
+                  <!-- Sello y Logo SKZ -->
+                  <div class="flex items-center justify-between border-b border-pink-200/60 pb-3">
+                    <div class="flex items-center gap-2">
+                      <span class="text-xl">🐺</span>
+                      <div>
+                        <div class="text-xs font-black tracking-wider text-gray-800">CHAN'S ROOM</div>
+                        <div class="text-[10px] text-pink-700 font-semibold">SAFE PLACE FOR STAY</div>
+                      </div>
+                    </div>
+                    <span class="text-xs font-bold text-amber-600">STAY 💛</span>
+                  </div>
+
+                  <!-- Mensaje de Chan -->
+                  <div class="space-y-2.5 py-2">
+                    <p class="font-letter text-lg sm:text-xl text-gray-800 leading-snug">
+                      "Hey Gabriela (Bombón)! Bang Chan here 🐺💛
+                      <br><br>
+                      Just wanted to remind you how special, talented and amazing you are. Keep creating magic with your
+                      nail art, rocking those peaceful aesthetic outfits, and smiling bright.
+                      <br><br>
+                      Whenever you need comfort or a little safe space, Chan's room is always open for you. Hugs from
+                      afar, Stay!"
+                    </p>
+                    <div class="text-right">
+                      <span class="font-handwriting text-xl text-amber-700 font-bold">— Christopher Bang 🐾</span>
+                    </div>
+                  </div>
+
+                  <!-- Detalles de fondo del reverso -->
+                  <div
+                    class="border-t border-pink-200/60 pt-2 flex items-center justify-between text-[10px] text-gray-400 font-medium">
+                    <span>SPECIAL GIFT EDITION</span>
+                    <span class="text-pink-600 font-bold">Toca para volver al frente ↻</span>
+                  </div>
+
                 </div>
 
               </div>
-
             </div>
           </div>
 
-          <!-- Botón para voltear la tarjeta -->
-          <div class="mt-4 flex items-center gap-2">
+          <!-- Botones de Control de la Photocard -->
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
             <button id="flipCardBtn"
-              class="px-4 py-2 rounded-full glass-pill text-xs font-bold text-gray-700 hover:text-amber-900 shadow-sm hover:shadow-md transition-all flex items-center gap-1.5">
+              class="px-4 py-2 rounded-full glass-pill text-xs font-bold text-gray-700 hover:text-amber-900 shadow-sm hover:shadow-md transition-all flex items-center gap-1.5 border border-yellow-200">
               <span>🔄 Girar Photocard</span>
             </button>
           </div>
 
         </div>
 
-        <!-- Columna 2: Reproductor de Música Retro/Spotify Glass -->
-        <div class="glass-card rounded-4xl p-6 sm:p-7 shadow-2xl border border-white/80 space-y-6">
+        <!-- Columna 2: Reproductor de Música Chan's Room Glass -->
+        <div class="glass-card rounded-4xl p-6 sm:p-7 shadow-2xl border border-white/90 space-y-5">
 
-          <!-- Audio Element Nativo para las 3 Canciones -->
+          <!-- Audio Element Nativo para las Canciones SKZ -->
           <audio id="skzAudio" preload="metadata" src="assets/youtiful.mp3"></audio>
 
+          <!-- Encabezado del Reproductor con Ecualizador -->
           <div class="flex items-center justify-between border-b border-gray-100 pb-3">
             <div class="flex items-center gap-2">
               <span class="w-3 h-3 rounded-full bg-rose-500 animate-pulse"></span>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-gray-500">Reproduciendo Para Ti</span>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-gray-500">Chan's Music Room</span>
             </div>
             <!-- Ecualizador animado -->
             <div id="equalizerBars" class="flex items-end gap-1 h-5 paused">
@@ -426,11 +463,28 @@
             </div>
           </div>
 
-          <!-- Info de la Canción con Carátula -->
+          <!-- Selector Rápido de Pistas (Tabs) -->
+          <div class="grid grid-cols-3 gap-1.5 bg-yellow-50/80 p-1 rounded-xl border border-yellow-200/60 text-center">
+            <button id="trackTab0"
+              class="track-tab py-1.5 px-2 rounded-lg text-xs font-bold transition-all bg-yellow-400 text-yellow-950 shadow-sm">
+              Youtiful 🌸
+            </button>
+            <button id="trackTab1"
+              class="track-tab py-1.5 px-2 rounded-lg text-xs font-semibold text-gray-600 hover:text-amber-900 transition-all">
+              Connected 🐺
+            </button>
+            <button id="trackTab2"
+              class="track-tab py-1.5 px-2 rounded-lg text-xs font-semibold text-gray-600 hover:text-amber-900 transition-all">
+              Hug Me 🫂
+            </button>
+          </div>
+
+          <!-- Info de la Canción con Carátula Dinámica -->
           <div class="flex items-center gap-4">
-            <div
-              class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg border-2 border-yellow-200 flex-shrink-0">
-              <img id="trackCover" src="assets/wolfchan.jpg" alt="Portada de la pista" class="w-full h-full object-cover">
+            <div id="trackCoverContainer"
+              class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg border-2 border-yellow-200 flex-shrink-0 relative">
+              <img id="trackCover" src="assets/wolfchan.jpg" alt="Portada de la pista" style="object-position: 68% 92%;"
+                class="w-full h-full object-cover">
             </div>
             <div class="space-y-1 flex-1 min-w-0">
               <h3 id="trackTitle" class="font-display font-bold text-base sm:text-lg text-gray-800 truncate">
@@ -446,7 +500,7 @@
               </div>
             </div>
             <!-- Botón Like / Corazón -->
-            <button id="favoriteHeartBtn" title="Dar amor"
+            <button id="favoriteHeartBtn" title="Guardar con amor"
               class="p-2 text-gray-400 hover:text-rose-500 transition-colors">
               <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path
@@ -455,7 +509,7 @@
             </button>
           </div>
 
-          <!-- Barra de Progreso del Reproductor (Clickeable para adelantar/retroceder) -->
+          <!-- Barra de Progreso del Reproductor -->
           <div id="playerProgressContainer" class="space-y-1.5 cursor-pointer group select-none">
             <div class="w-full bg-gray-200/70 h-2 group-hover:h-2.5 rounded-full overflow-hidden transition-all">
               <div id="playerProgress"
@@ -469,37 +523,54 @@
           </div>
 
           <!-- Controles de Reproducción -->
-          <div class="flex items-center justify-center gap-6">
-            <button id="prevTrackBtn" title="Canción anterior"
-              class="text-gray-500 hover:text-gray-800 transition-colors p-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          <div class="flex items-center justify-between px-2">
+            <!-- Botón Bucle / Loop -->
+            <button id="loopTrackBtn" title="Repetir canción"
+              class="text-gray-400 hover:text-amber-600 transition-colors p-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>
             </button>
 
-            <!-- Botón Play/Pausa Principal -->
-            <button id="playPauseBtn" title="Reproducir Canción"
-              class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-400 via-amber-400 to-yellow-500 text-yellow-950 flex items-center justify-center shadow-lg hover:shadow-yellow-400/50 hover:scale-105 active:scale-95 transition-all duration-300">
-              <!-- Play Icon -->
-              <svg id="playIcon" class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-              <!-- Pause Icon -->
-              <svg id="pauseIcon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-              </svg>
-            </button>
+            <div class="flex items-center gap-5">
+              <button id="prevTrackBtn" title="Canción anterior"
+                class="text-gray-500 hover:text-gray-800 transition-colors p-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
 
-            <button id="nextTrackBtn" title="Siguiente canción"
-              class="text-gray-500 hover:text-gray-800 transition-colors p-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+              <!-- Botón Play/Pausa Principal -->
+              <button id="playPauseBtn" title="Reproducir Canción"
+                class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-400 via-amber-400 to-yellow-500 text-yellow-950 flex items-center justify-center shadow-lg hover:shadow-yellow-400/50 hover:scale-105 active:scale-95 transition-all duration-300">
+                <!-- Play Icon -->
+                <svg id="playIcon" class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <!-- Pause Icon -->
+                <svg id="pauseIcon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+              </button>
+
+              <button id="nextTrackBtn" title="Siguiente canción"
+                class="text-gray-500 hover:text-gray-800 transition-colors p-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Control de Volumen Desplegable / Compacto -->
+            <div class="flex items-center gap-1 text-gray-400">
+              <span class="text-xs">🔊</span>
+              <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="0.8" class="w-16 sm:w-20 h-1.5">
+            </div>
           </div>
 
           <!-- Mensaje de Confort de Stray Kids -->
-          <div class="bg-pink-50/70 border border-pink-100 rounded-2xl p-3 text-center">
+          <div class="bg-pink-50/80 border border-pink-100 rounded-2xl p-3 text-center">
             <p id="trackQuote" class="text-xs text-pink-900 font-medium italic">
               "You are beautiful just the way you are... never forget it 🌸"
             </p>
@@ -514,7 +585,7 @@
     <!-- =========================================================================
          4. BUZÓN DE MENSAJE SECRETO (CARTA CON SELLO DE CERA)
          ========================================================================= -->
-    <section class="space-y-6 pt-4">
+    <section id="carta" class="space-y-6 pt-4 scroll-mt-20">
 
       <div class="text-center space-y-2">
         <div class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest text-amber-800 uppercase">
@@ -526,63 +597,75 @@
           Buzón de Mensaje Secreto
         </h2>
         <p class="text-xs sm:text-sm text-gray-600 max-w-lg mx-auto">
-          Toca el sello dorado de cera para romper el lacre y revelar la carta que fue escrita especialmente para ti.
+          Toca el sello dorado de cera con la huellita de Wolf Chan para romper el lacre y revelar la carta que fue
+          escrita especialmente para ti.
         </p>
       </div>
 
-      <!-- Contenedor del Sobre Interactivo -->
-      <div class="max-w-lg mx-auto pt-6">
-        <div id="secretEnvelope" class="envelope-wrapper relative cursor-pointer group">
+      <!-- Contenedor del Buzón Interactivo -->
+      <div class="max-w-xl mx-auto pt-4">
 
-          <!-- Solapa Superior que se despliega (Envelope Flap) -->
+        <!-- ESTADO 1: Sobre Cerrado con Sello de Cera Dorado -->
+        <div id="envelopeClosedContainer"
+          class="envelope-interactive-area relative cursor-pointer group transition-all duration-500">
+
+          <!-- Solapa Superior en 3D -->
           <div
-            class="envelope-flap absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#fad5df] to-[#fcd9e2] rounded-t-3xl border-t border-x border-white/80 shadow-md z-20 flex items-center justify-center">
+            class="envelope-flap-3d absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-[#fbcfe8] to-[#f472b6] rounded-t-3xl border-t-2 border-x-2 border-white shadow-md z-20 flex items-center justify-center">
 
-            <!-- Sello de Cera Dorado (Wax Seal) -->
-            <button id="waxSeal" title="Abrir Sello de Cera"
-              class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-600 via-yellow-500 to-amber-400 shadow-xl border-2 border-yellow-200 flex items-center justify-center transform -translate-y-4 hover:scale-110 active:scale-95 transition-transform duration-300 z-30">
+            <!-- Sello de Cera Dorado (Wax Seal) con Huella de Wolf Chan -->
+            <button id="waxSeal" title="Romper sello de cera y leer carta"
+              class="animate-wax-glow w-16 h-16 rounded-full bg-gradient-to-tr from-amber-600 via-yellow-500 to-amber-400 shadow-2xl border-2 border-yellow-200 flex items-center justify-center transform -translate-y-2 hover:scale-110 active:scale-95 transition-transform duration-300 z-30">
               <span class="text-2xl select-none">🐾</span>
             </button>
-
           </div>
 
           <!-- Cuerpo Principal del Sobre -->
           <div
-            class="relative bg-gradient-to-b from-[#fce7f3] to-[#fbcfe8] h-72 rounded-3xl p-6 shadow-2xl border border-white/90 overflow-hidden flex flex-col justify-end z-10">
-
-            <!-- Líneas de adorno del sobre -->
-            <div
-              class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none">
-            </div>
-
-            <div class="text-center pb-2">
-              <span class="text-xs uppercase font-bold tracking-widest text-pink-800">Toca el sello o el sobre para
-                abrir</span>
+            class="relative bg-gradient-to-b from-[#fce7f3] to-[#fbcfe8] h-64 rounded-3xl p-6 shadow-2xl border border-white/90 overflow-hidden flex flex-col justify-end z-10">
+            <div class="text-center pb-3 space-y-1">
+              <p class="text-xs font-black uppercase tracking-widest text-pink-900">
+                Para: Mi Bombón 💛
+              </p>
+              <p class="text-[11px] text-pink-700 font-medium">
+                Toca el sello dorado para abrir tu dedicatoria
+              </p>
             </div>
           </div>
+        </div>
 
-          <!-- Carta Desplegable que Emerge (Letter Paper) -->
-          <div id="letterPaper"
-            class="letter-paper absolute inset-x-2 sm:inset-x-4 top-4 bg-gradient-to-b from-[#fffefc] to-[#fffbf5] rounded-2xl p-6 sm:p-8 shadow-2xl border border-yellow-200/90 z-0">
+        <!-- ESTADO 2: Carta Desplegada y Abierta (Visible al Romper el Sello) -->
+        <div id="envelopeOpenContainer" class="hidden transition-all duration-700 space-y-4">
 
-            <div class="flex items-center justify-between border-b border-yellow-200/60 pb-3 mb-4">
+          <div
+            class="letter-parchment bg-gradient-to-b from-[#fffefc] to-[#fffbf5] rounded-3xl p-6 sm:p-10 border border-yellow-200/90 shadow-2xl relative">
+
+            <!-- Barra Superior de la Carta -->
+            <div class="flex flex-wrap items-center justify-between border-b border-yellow-200/70 pb-4 mb-5 gap-3">
               <div class="flex items-center gap-2">
                 <span class="text-2xl">🌼</span>
                 <span id="letterRecipient" class="font-display font-bold text-base sm:text-lg text-amber-900">
-                  Para: Mi bombón (Gabriela Reggio) 💛
+                  Para: Mi bombón 💛
                 </span>
               </div>
 
-              <!-- Botón para Editar Nombre de la Dedicatoria -->
-              <button id="editLetterBtn" title="Personalizar su nombre"
-                class="text-xs bg-yellow-100 text-yellow-900 hover:bg-yellow-200 px-2.5 py-1 rounded-lg font-semibold transition-colors flex items-center gap-1">
-                <span>✏️</span>
-                <span>Cambiar Nombre</span>
-              </button>
+              <!-- Acciones de la Carta -->
+              <div class="flex items-center gap-2">
+                <button id="editLetterBtn" title="Personalizar dedicatoria"
+                  class="text-xs bg-yellow-100 hover:bg-yellow-200 text-yellow-900 px-2.5 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1 border border-yellow-300">
+                  <span>✏️</span>
+                  <span>Editar Nombre</span>
+                </button>
+                <button id="closeLetterBtn" title="Volver a guardar la carta en el sobre"
+                  class="text-xs bg-pink-100 hover:bg-pink-200 text-pink-900 px-2.5 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1 border border-pink-200">
+                  <span>💌</span>
+                  <span>Doblar Carta</span>
+                </button>
+              </div>
             </div>
 
-            <!-- Cuerpo de la Dedicatoria -->
-            <div id="letterBody" class="font-letter text-lg sm:text-xl text-gray-800 leading-relaxed space-y-3">
+            <!-- Contenido de la Carta -->
+            <div id="letterBody" class="font-letter text-lg sm:text-xl text-gray-800 leading-relaxed space-y-4">
               <p>
                 Mi bombón... Dicen que regalar flores amarillas cada 21 de septiembre es una promesa de amor bonito, de
                 alegría sincera y de desearle lo más radiante de la vida a quien las recibe.
@@ -600,8 +683,10 @@
               </p>
               <p>
                 Y bueno... te tengo que ser totalmente honesto con una pequeña confesión jaja. Si no te llegaron flores
-                reales a la puerta es porque no sabía a dónde mandar un delivery, y mandarlas a tu trabajo iba a ser
-                demasiado sospechoso (¡no quería ponerte en aprietos ni levantar miradas raras!). Me quedé sin ideas de
+                reales a la puerta es porque no sabía a dónde mandar un delivery, y mandarlas a la oficina pero iba a
+                ser
+                demasiado sospechoso (¡no quería ponerte en aprietos ni levantar miradas raras! Jaja). Me quedé sin
+                ideas de
                 logística... pero me negaba por completo a que te quedaras sin tus flores amarillas hoy.
               </p>
               <p>
@@ -609,27 +694,120 @@
                 cuidando de ti y Bang Chan recordándote lo increíble que eres.
               </p>
               <p>
-                Gracias por ser esa persona tan especial para mí. ¡Feliz 21 de Septiembre, bombón!
+                Gracias por ser esa personita super dulce y hermosa. ¡Feliz 21 de Septiembre, bombón!
               </p>
-              <p>
-                PD: Perdon sino tengo mucha creatividad con esto realmente no he estudiado los corenamos q te gustan
-                jeje. Me disculpo si no puedo hacerlo mejor
+              <p class="text-amber-800 font-medium">
+                PD: Quizá no soy el más experto en idols coreanos de K-Pop jeje, pero investigué con mucho cariño a Bang
+                Chan y Wolf Chan porque sé lo mucho que te gustan y lo feliz que te hacen. Quería que tu día fuera tan
+                especial como tú lo eres pos pa mi💛
               </p>
             </div>
 
             <!-- Firma -->
-            <div class="pt-6 text-right border-t border-yellow-100 mt-4">
-              <p class="font-handwriting text-2xl text-amber-700 font-bold">Con todo mi cariño siempre para ti </p>
-              <p class="text-xs text-gray-400 uppercase tracking-wider mt-0.5">Stay Safe • You Make Stray Kids Stay 🐺
+            <div class="pt-6 text-right border-t border-yellow-100 mt-6 space-y-1">
+              <p class="font-handwriting text-2xl sm:text-3xl text-amber-700 font-bold">
+                Con todo mi cariño
               </p>
             </div>
 
+            <!-- Botón Copiar al Portapapeles -->
+            <div class="pt-4 flex justify-end">
+              <button id="copyLetterBtn"
+                class="px-4 py-2 rounded-xl bg-yellow-50 hover:bg-yellow-100 text-amber-900 text-xs font-bold transition-all border border-yellow-200 flex items-center gap-1.5 shadow-sm">
+                <span>📋</span>
+                <span>Copiar Carta para Guardarla</span>
+              </button>
+            </div>
           </div>
-
         </div>
       </div>
-
     </section>
+    <div id="bangChanHugModal"
+      class="fixed inset-0 z-50 bg-black/60 backdrop-blur-md hidden items-center justify-center p-4 transition-opacity duration-300">
+      <div
+        class="bg-gradient-to-b from-[#fffbf2] via-[#fff5eb] to-[#fef2f2] rounded-4xl p-6 sm:p-8 max-w-md w-full shadow-2xl border-2 border-yellow-300 relative text-center space-y-5 animate-pulse-glow">
+
+        <button id="closeHugModalBtn"
+          class="absolute top-4 right-4 w-9 h-9 rounded-full bg-yellow-100 hover:bg-yellow-200 text-amber-900 font-bold flex items-center justify-center transition-colors">
+          ✕
+        </button>
+
+        <div
+          class="w-20 h-20 mx-auto rounded-3xl bg-pink-100 flex items-center justify-center shadow-inner text-4xl border-2 border-pink-200">
+          🫂
+        </div>
+
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-1.5 text-xs font-extrabold tracking-widest text-pink-700 uppercase">
+            <span>🐺</span> CHAN'S ROOM TRADITION <span>💛</span>
+          </div>
+          <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-800">
+            "Come here... Big Hug! 🫂"
+          </h3>
+        </div>
+
+        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 border border-yellow-200 text-left space-y-2">
+          <p class="font-letter text-lg sm:text-xl text-gray-800 leading-snug">
+            "1, 2, 3... *abrazo apretado* 🫂💛
+            <br><br>
+            Gabriela, recuerda que no tienes que cargar con todo tú sola. Trabajas duro, creas cosas hermosas con tus
+            uñas y tienes una luz única. Cuando el mundo se sienta pesado, este abrazo siempre estará aquí esperándote.
+            <br><br>
+            You are doing amazing, Stay. Eres súper especial."
+          </p>
+          <p class="font-handwriting text-right text-lg text-amber-700 font-bold">
+            — Bang Chan & Wolf Chan 🐾
+          </p>
+        </div>
+
+        <button id="acceptHugBtn"
+          class="w-full py-3 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-yellow-950 font-bold text-sm shadow-md hover:shadow-yellow-400/50 transition-all transform hover:scale-102">
+          Recibir el abrazo con cariño 💛
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         MODAL 2: CELEBRACIÓN DE LAS 21 FLORES (RAMO DE GABRIELA)
+         ========================================================================= -->
+    <div id="bouquetCelebrationModal"
+      class="fixed inset-0 z-50 bg-black/60 backdrop-blur-md hidden items-center justify-center p-4 transition-opacity duration-300">
+      <div
+        class="bg-gradient-to-b from-[#fffefc] via-[#fff9e6] to-[#fef3c7] rounded-4xl p-6 sm:p-8 max-w-md w-full shadow-2xl border-4 border-yellow-300 relative text-center space-y-5">
+
+        <button id="closeBouquetModalBtn"
+          class="absolute top-4 right-4 w-9 h-9 rounded-full bg-yellow-100 hover:bg-yellow-200 text-amber-900 font-bold flex items-center justify-center transition-colors">
+          ✕
+        </button>
+
+        <div class="text-5xl animate-bounce">💐</div>
+
+        <div class="space-y-1">
+          <span class="text-xs font-black tracking-widest text-amber-800 uppercase">
+            21 DE SEPTIEMBRE • MISIÓN CUMPLIDA
+          </span>
+          <h3 class="font-display font-black text-2xl sm:text-3xl text-gray-800">
+            ¡Tu Ramo de Flores Amarillas! 🌼
+          </h3>
+        </div>
+
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Has completado las <strong class="text-amber-700">21 flores amarillas</strong>. Este ramo simboliza
+          admiración,
+          ternura, paz y el deseo sincero de verte sonreír todos los días.
+        </p>
+
+        <div
+          class="bg-white/80 rounded-2xl p-4 border border-yellow-200 shadow-inner text-xs font-semibold text-amber-900">
+          ✨ "Flores amarillas eternas que nunca se marchitan para mi bombón más bonita" 🐺💛
+        </div>
+
+        <button id="acceptBouquetBtn"
+          class="w-full py-3 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-yellow-950 font-bold text-sm shadow-md hover:shadow-yellow-400/50 transition-all">
+          Guardar este Ramo en mi Corazón 💛
+        </button>
+      </div>
+    </div>
 
     <!-- =========================================================================
          FOOTER
@@ -640,9 +818,6 @@
         <span>•</span>
         <span>Wolf Chan & Bang Chan</span>
         <span>🐺</span>
-      </p>
-      <p class="text-gray-400 font-medium">
-        "Stray Kids Everywhere All Around The World — You Make Stray Kids Stay"
       </p>
     </footer>
 
