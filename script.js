@@ -324,7 +324,7 @@ const flowerCompliments = [
   'Flores eternas que nunca se marchitan para ti 🌼',
   'Gracias por existir y ser tan increíble 💛',
   'Tu vibra relajante es un refugio de calma 🕊️',
-  'Abrazo apretado y cariñoso para ti hoy 🫂',
+  'Abrazo apretado y cariñoso para ti hoy 🤗💛',
   '21 de Septiembre: ¡Tus flores amarillas! 🌼'
 ];
 
@@ -927,11 +927,11 @@ function initWolfChanPetting() {
     'Flores amarillas, Wolf Chan y Bang Chan... ¡te armamos el combo perfecto para ti hoy! 🌼🐺',
     'Bang Chan me dijo al oído: "Asegúrate de que Gabriela sepa lo talentosa y valiosa que es" 🐺💛',
     'You Make Stray Kids Stay... pero hoy sobre todo, tú haces sonreír a quien te preparó esto 💛',
-    'Chan\'s Room siempre será tu lugar seguro cuando necesites descansar, Stay 🫂✨',
+    'Chan\'s Room siempre será tu lugar seguro cuando necesites descansar, Stay 🤗✨',
     'Christopher Bang te manda un: "G\'day mate! Keep shining, you\'re doing amazing!" 🐺🐾',
     'Si Bang Chan te conociera en persona, diría de inmediato: "She\'s so sweet and lovely!" 💛',
     'Stray Kids everywhere all around the world... ¡y la Stay más preciosa está aquí leyendo esto! 🌟',
-    '¿Tuviste un día largo o pesado? Ven, quédate aquí y déjate mimar un ratito 🐾🫂',
+    '¿Tuviste un día largo o pesado? Ven, quédate aquí y déjate mimar un ratito 🐾🤗',
     'Recuerda descansar, tomar agüita y comer rico hoy, bombón... ¡te lo ordenan Wolf Chan y Chan! 💛',
     'Tienes una luz tan bonita que hace que cualquier día gris se sienta cálido 🌟',
     '¡Sigue acariciándome! Mis orejitas de lobito se mueven solas de tanta felicidad 🐾🥺',
@@ -945,7 +945,7 @@ function initWolfChanPetting() {
   const milestonePhrases = {
     10: '¡10 mimos! ¡Ya somos mejores amigos oficiales, bombón! 🐾💛✨',
     25: '¡25 mimos! Wolf Chan está bailando de la emoción por tus caricias 🐺💃✨',
-    50: '¡50 mimos! ¡Wow! Te ganaste un pase VIP a los abrazos de Bang Chan de por vida 🫂👑💛',
+    50: '¡50 mimos! ¡Wow! Te ganaste un pase VIP a los abrazos de Bang Chan de por vida 🤗👑💛',
     75: '¡75 mimos! Mis orejitas no dan más de tanta felicidad y amor 🥰🐾🌻',
     100: '¡100 mimos cumplidos! Oficialmente eres la reina indiscutible de mi corazón 🐺👑💛✨'
   };
@@ -1052,7 +1052,7 @@ function initBangChanHug() {
   if (closeBtn) closeBtn.addEventListener('click', closeHug);
   if (acceptBtn) acceptBtn.addEventListener('click', () => {
     closeHug();
-    alert('🫂 ¡Abrazo recibido! Bang Chan te envía toda su fuerza y cariño para tu día.');
+    alert('🤗 ¡Abrazo recibido! Bang Chan te envía toda su fuerza y cariño para tu día.');
   });
 
   if (modal) {
